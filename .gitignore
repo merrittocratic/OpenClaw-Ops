@@ -1,15 +1,39 @@
 # macOS
 .DS_Store
+.AppleDouble
+.LSOverride
 
-# Secrets — never track these
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.Rproj.user/
+.Rhistory
+.RData
+
+# Environment and credentials — NEVER track
 .env
-*.env.*
-*.secret
-credentials.*
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+credentials.json
+secrets.json
+token.json
 
-# Raw configs with secrets (use configs/ for sanitized versions only)
-configs/raw/
+# Local runtime state (forward-compatible with future OpenClaw configs)
+.openclaw/
+.cache/
+*.log
+logs/
 
-# Journal entries with sensitive operational detail — evaluate per-entry
-# Uncomment to blanket-ignore; otherwise review each before committing
-# journal/*.md
+# Temp and junk
+*.tmp
+Thumbs.db
+
+# Note: journal/ entries are INTENTIONALLY tracked.
+# Reference sensitive values by name, not by value, per CLAUDE.md.
