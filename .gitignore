@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Secrets — never track these
+.env
+*.env.*
+*.secret
+credentials.*
+
+# Raw configs with secrets (use configs/ for sanitized versions only)
+configs/raw/
+
+# Journal entries with sensitive operational detail — evaluate per-entry
+# Uncomment to blanket-ignore; otherwise review each before committing
+# journal/*.md
