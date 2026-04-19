@@ -1,8 +1,20 @@
-# Journal Entry — YYYY-MM-DD
+# Journal Entry Templates
+
+## Routine Entry (default)
+### Action Title
+- What happened
+- Verification: how you confirmed it worked
+- Follow-up if any
+
+---
+
+## Significant Change Entry
+Use for: skill installs, permission grants, credential rotations, 
+incidents, scheduled tasks, model tier changes.
 
 ## Type
 - [ ] Skill / plugin installed
-- [ ] Permission granted (new folder, new connector, new credential, new scope)
+- [ ] Permission granted
 - [ ] Configuration change
 - [ ] Credential rotation or access change
 - [ ] Incident or near-miss
@@ -14,18 +26,19 @@
 One-sentence description of what happened.
 
 ## Details
-What specifically was added, modified, or encountered. Include version numbers, paths, identifiers, commit hashes — anything a future-you would need to reconstruct the change. Reference sensitive values by name, not by value.
+What specifically changed. Version numbers, paths, identifiers, commit 
+hashes. Reference sensitive values by name, not value.
 
 ## Why
-The reason for the change. What was it meant to enable, fix, or respond to?
+What was this meant to enable, fix, or respond to?
 
 ## Verification
-How I confirmed the change works as intended. Log line, command output, test result, file path.
+How you confirmed it works.
 
 ## Rollback / Kill Switch
-Exact commands or steps to undo this if something goes wrong. If there is no rollback path, state that explicitly and note the accepted risk.
+Exact steps to undo. If no rollback exists, state that explicitly.
 
 ## Follow-ups
 - [ ] Items to re-check next week
-- [ ] Items to re-audit at the next full checklist review
-- [ ] Any open questions or deferred work
+- [ ] Items to re-audit at next full checklist review
+- [ ] Open questions or deferred work

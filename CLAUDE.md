@@ -44,9 +44,20 @@ journal.
 Every significant change — skill install, permission grant, credential rotation,
 config change, scheduled task addition, model tier change — gets a journal entry
 **before** the action is taken, not after. The log is the preflight checklist.
-Entries live in `journal/` using the template. Filename pattern:
-`YYYY-MM-DD_short-description.md`. Do NOT retroactively edit old journal entries
-to reflect new knowledge — append a new entry that references the old one.
+
+Entries live in `journal/` using weekly files with day headers.
+Filename pattern: `YYYY-WWW.md` (ISO week number, e.g. `2026-W16.md`).
+
+Structure:
+# Week of [Month Day, Year]
+
+## YYYY-MM-DD
+### Action Title
+- bullet details
+
+Do NOT retroactively edit old entries — append a new entry that references
+the old one. Do NOT create a new file per action — append to the current
+week's file.
 
 ### Single-Operator Trust Model
 One human, one gateway, one trust boundary. No multi-tenant, no shared agents,
@@ -86,6 +97,13 @@ OpenClaw-Ops/
 If a journal entry needs to reference sensitive values, reference them by
 **name** (e.g., "rotated the X API write token") not by **value**. That keeps
 the entry safe to track and preserves the audit trail.
+
+### Secrets Convention
+All credentials live in 1Password. Each pipeline repo (e.g. `autopilot`) owns
+its own `.env.template` — a mapping of env var names to `op://` vault
+references. No actual values appear in any tracked file. This ops repo
+documents the convention but does NOT host `.env.template` files. Do NOT
+create `.env.template` here; create it in the relevant pipeline repo.
 
 ---
 
