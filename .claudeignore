@@ -1,0 +1,9 @@
+# Claude Code context exclusions
+
+# Journal — long historical markdown, load specific files when needed
+journal/
+
+# Binary files
+*.docx
+*.xlsx
+*.pdf
