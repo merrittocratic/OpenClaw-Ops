@@ -148,16 +148,3 @@ This repo is primarily markdown and configs. If scripts arrive:
 
 ---
 
-## Building in Public Log
-**Ask at the end of EVERY session, not just when something feels notable.**
-Log lives at `/Users/stephenmerritt/content/draft/building_in_public_log.md`
-(cross-repo reference — in the content repo).
-
-Proactive prompt at natural stopping points:
-
-> "Any candidates for the building in public log?"
-
-Good OpenClaw-Ops candidates: the aviation-safety-to-agent-ops mental model,
-layered-defense decisions, surprising failure modes discovered during setup,
-the break-glass SSH story, the journal-precedes-action discipline as an
-anti-pattern-prevention tool. Not routine: doc typo fixes, README tweaks.
